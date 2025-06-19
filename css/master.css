@@ -20,9 +20,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-padding-top: 80px; /* compensate for sticky nav offset */
+}
 
 body {
-  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  font-family: "Segoe UI", "Roboto", sans-serif;
   background-color: var(--light-bg);
   color: var(--text-color);
   line-height: 1.7;
@@ -32,13 +35,14 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(to right, #007bff, #6610f2);
   min-height: 100vh;
-  padding: 100px 15px;
-  color: #fff;
-  text-align: center;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-  transition: background 0.4s ease-in-out;
+  padding-top: 80px; /* adjust based on your navbar height */
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  animation: gradientBG 15s ease infinite;
+  background-size: 200% 200%;
+  box-sizing: border-box;
 }
 
 .hero h1 {
@@ -63,7 +67,7 @@ section h2 {
 }
 
 section h2::after {
-  content: '';
+  content: "";
   width: 60px;
   height: 3px;
   background-color: var(--primary-color);
