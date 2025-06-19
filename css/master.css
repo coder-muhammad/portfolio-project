@@ -1,0 +1,189 @@
+/* CSS Variables for Theme */
+:root {
+  --primary-color: #0d6efd;
+  --secondary-color: #6610f2;
+  --text-color: #212529;
+  --light-bg: #f4f7fa;
+  --card-bg: #ffffff;
+  --border-color: #dee2e6;
+  --footer-bg: #212529;
+  --footer-text: #adb5bd;
+  --btn-hover: #0b5ed7;
+  --btn-hover-border: #0a58ca;
+  --heading-font-size: 2rem;
+  --paragraph-font-size: 1rem;
+}
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-color);
+  line-height: 1.7;
+  scroll-behavior: smooth;
+  font-size: var(--paragraph-font-size);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  min-height: 100vh;
+  padding: 100px 15px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  transition: background 0.4s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+/* Section Titles */
+section h2 {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: var(--heading-font-size);
+  margin-bottom: 1.5rem;
+  position: relative;
+  text-align: center;
+}
+
+section h2::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-color);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Skills List */
+.list-group-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  font-size: 1rem;
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  color: #343a40;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.card-text {
+  color: #495057;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--btn-hover);
+  border-color: var(--btn-hover-border);
+}
+
+/* Contact Section */
+#contact a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  font-size: 0.95rem;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  section h2 {
+    font-size: 1.75rem;
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  body {
+    font-size: 0.95rem;
+  }
+
+  #contact a {
+    font-size: 0.95rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+}
